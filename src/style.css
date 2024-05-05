@@ -1,0 +1,70 @@
+ .title {
+    width: 70vw;
+    color: rgb(213, 139, 143);
+    margin-top: 5vh;
+    margin-left: 15vw; /* הוספתי מרווח משמאל כדי להתאים למראה במסכים קטנים */
+    z-index: 1000;
+}
+
+.divImg {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("./aaa.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+}
+
+.divs {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20vh;
+    margin-bottom: 3vh;
+}
+
+.div {
+    text-align: center;
+    z-index: 1000;
+    height: 10vh;
+    font-size: 3vh;
+    border-radius: 10vh;
+    background-color: #cbd3a9;
+    border: 2px solid rgb(44, 130, 105);
+    opacity: 0.9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    margin-bottom: 2vh;
+    width: 20vw;
+}
+
+.div:hover {
+    transform: scale(1.01); 
+    opacity: 0.8;
+}
+
+.ring {
+    height: 50vh;
+    width: auto;
+    background-image: url("./ring.jpg");
+    background-repeat: no-repeat;
+}
+
+/* For iPhone (portrait and landscape) */
+@media only screen and (max-width: 500px) {
+    .title {
+        width: 90vw;
+        margin-top: 8vh;
+        margin-left: 2vw; 
+    }
+
+    .div {
+        height: 10vh;
+        width: 50vw;
+    }
+  .divs{
+    margin-top: 7vh;
+  }
+}
