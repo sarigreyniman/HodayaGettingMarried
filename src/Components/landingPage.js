@@ -21,7 +21,10 @@ const LandingPage = () => {
     const handleOpenDialog = () => {
         setShowVideo(false);
         setOpenDialog(true);
-    }; 
+    };
+    const handleOpenCatalog = () => {
+            window.open('https://kataloghodaya.onrender.com', '_blank');
+    };
 
     const handleOpenVideo = () => {
         setShowVideo(true);
@@ -94,6 +97,22 @@ const LandingPage = () => {
                     },
                     width: isMobile || isTablet ? '100%' : '18vw',
                     maxWidth: '20vw',
+                }} onClick={handleOpenCatalog}>
+                    Catalog
+                </Button>
+                <Button className='div' style={{ textAlign: 'center' }} sx={{
+                    color: 'black',
+                    boxShadow: 'none',
+                    borderRadius: isMobile || isTablet ? '20vh' : '10vh',
+                    backgroundColor: '#cbd3a9',
+                    fontSize: isMobile || isTablet ? '2vh' : '3vh',
+                    '&:hover': {
+                        backgroundColor: '#cbd3a9',
+                        boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.2)',
+                        textShadow: '1px 1px 2px rgb(255,255,255)'
+                    },
+                    width: isMobile || isTablet ? '100%' : '18vw',
+                    maxWidth: '20vw',
                 }} onClick={handleOpenDialog}>
                     Read about it
                 </Button>
@@ -111,7 +130,7 @@ const LandingPage = () => {
                         src="https://drive.google.com/file/d/1q_HfgREHW5B2F83M_Lq4w4voaIi1TkgN/preview"
                         style={{ width: '100%', maxWidth: '800px', marginLeft: isMobile || isTablet ? '0vw' : '20vw' }}
                         width="100%"
-                        height= {isMobile?"200px":"400px"}
+                        height={isMobile ? "200px" : "400px"}
                         frameBorder="0"
                         allowFullScreen
                     ></iframe>
